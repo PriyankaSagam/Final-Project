@@ -6,11 +6,11 @@ const SALT_ROUNDS = 6;
 
 const orderSchema = mongoose.Schema(
   {
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      ref: 'User',
-    },
+    // user: {
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   required: true,
+    //   ref: 'User',
+    // },
     orderItems: [
       {
         name: { type: String, required: true },
@@ -40,4 +40,4 @@ const orderSchema = mongoose.Schema(
 
 const Order = mongoose.model('Order', orderSchema);
 
-export default Order;
+//export default Order;

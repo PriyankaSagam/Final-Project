@@ -4,7 +4,7 @@ require('./database.cjs');
 
 //models
 // const Category = require('../models/category.cjs');
-const Item = require('./models/item.cjs');
+const Product = require('../models/product.cjs');
 
 (async function() {
 
@@ -17,13 +17,13 @@ const Item = require('./models/item.cjs');
     
   // ]);
 
-  await Item.deleteMany({});
-  const items = await Item.create([
+  await Product.deleteMany({});
+  const products = await Product.create([
      
-      {name: 'brace4', imageurl:"./images/brace4.jpg",  price: 58.98},
-      {name: 'brace3', imageurl:"./images/brace3.jpg",  price: 45.84},
-      {name: 'brace2', imageurl:"./images/brace2.jpg",  price: 259.90},
-      {name: 'brace1', imageurl:"./images/brace1.jpg",  price: 75.97},
+      {name: 'brace4', image:"./images/brace4.jpg",  price: 58.98},
+      {name: 'brace3', image:"./images/brace3.jpg",  price: 45.84},
+      {name: 'brace2', image:"./images/brace2.jpg",  price: 259.90},
+      {name: 'brace1', image:"./images/brace1.jpg",  price: 75.97},
       
       // {name: 'neck1', imageurl: "./images/neck1.jpg", category: categories[1], price: 120.95},
       // {name: 'neck2', imageurl:"./images/neck2.jpg", category: categories[1], price: 153.94},
@@ -37,7 +37,7 @@ const Item = require('./models/item.cjs');
     
   ]);
 
-  console.log(items)
+  console.log(products)
 
   process.exit();
 

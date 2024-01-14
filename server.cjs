@@ -4,6 +4,9 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+//const cors = require('cors');
+
+
 
 
 // define variables
@@ -43,7 +46,8 @@ app.use('/api/users', require('./routes/api/users.cjs'));
 // const userRouter = require('./routes/api/users.cjs')
 // app.use('/api/user', userRouter);
 
-
+// Use productRoutes for /api/products
+app.use('/api/products', require('./routes/api/product.cjs'));
 
 // The following "catch all" route (note the /*) is necessary
 // to return the index.html on all non-AJAX requests
@@ -51,6 +55,7 @@ app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 
 });
+
 
 
 app.listen(PORT, function () {

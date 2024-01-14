@@ -12,10 +12,11 @@ import "./App.css";
 // import pages
 import AuthPage from "./AuthPage";
 // import NewOrderPage from "./NewOrderPage";
-import Jewelry from "./Jewelry";
+//import Jewelry from "./Jewelry";
 // import components
 import NavBar from "../components/NavBar";
 import Cart from "../components/Cart"
+import ProductList from "./ProductList";
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -30,7 +31,7 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-           <Route path="/jewelry" element={<Jewelry />} />
+           <Route path="/jewelry" element={<ProductList />} />
            <Route path="/cart" element={<Cart />} />
 
           </Routes>
