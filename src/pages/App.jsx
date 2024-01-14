@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
-
 // import my functionality that I've added
 import { getUser } from "../utilities/users-services";
+import { CartProvider } from "./CartContext";
 
 // css
 import "./App.css";
@@ -15,7 +15,7 @@ import AuthPage from "./AuthPage";
 //import Jewelry from "./Jewelry";
 // import components
 import NavBar from "../components/NavBar";
-import Cart from "../components/Cart"
+import CartDisplay from "./CartDisplay"
 import ProductList from "./ProductList";
 
 function App() {
@@ -26,20 +26,20 @@ function App() {
   // initialize that to null
   // the setter function should be named according to convention
   return (
-    <>
+    <CartProvider>
       {user ? (
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
            <Route path="/jewelry" element={<ProductList />} />
-           <Route path="/cart" element={<Cart />} />
+           <Route path="/cart" element={<CartDisplay />} />
 
           </Routes>
         </>
       ) : (
         <AuthPage setUser={setUser} />
       )}
-    </>
+    </CartProvider>
   );
 }
 

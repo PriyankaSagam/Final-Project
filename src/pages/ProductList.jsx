@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useCart  } from './CartContext';
 import './ProductList.css'
+
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+  const { dispatch } = useCart();
 
   useEffect(() => {
     // Fetch products from the backend using the fetch function
@@ -17,6 +20,10 @@ const ProductList = () => {
       .catch(error => console.error('Error fetching products:', error));
   }, []);
 
+  const handleAddToCart = (product) => {
+    dispatch({ type: 'ADD_TO_CART', payload: product });
+  };
+
   return (
     <div className='braclet'>
       <h1>Product List</h1>
@@ -25,8 +32,10 @@ const ProductList = () => {
       <ul>
         {products.map(product => (
           <li key={product._id}>
-            {product.name}  ${product.price} <img src={product.image}></img>
-            
+            {product.id} {product.name}  ${product.price} <img src={product.image}></img>
+            <button onClick={() => handleAddToCart(product)}>
+              Add to Cart
+            </button>
           </li>
         ))}
       </ul>
