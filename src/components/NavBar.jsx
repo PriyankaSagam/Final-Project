@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import * as userService from '../utilities/users-services'
+import './NavBar.css'
 
 function NavBar(props) {
   // Add in functionality to log out

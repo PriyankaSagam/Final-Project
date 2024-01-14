@@ -1,0 +1,23 @@
+/* CSS for the Navigation Component */
+
+.nav {
+    background-color: #2d1098;
+    padding: 10px;
+    color: rgb(16, 148, 49);
+    text-align: center;
+  }
+  
+  .nav a {
+    color: red;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .welcome {
+    font-weight: bold;
+  }
+  
