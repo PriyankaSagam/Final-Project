@@ -5,7 +5,7 @@ const ProductList = () => {
 
   useEffect(() => {
     // Fetch products from the backend using the fetch function
-    fetch('http://localhost:3001/api/products')
+    fetch('http://localhost:5173/api/products')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

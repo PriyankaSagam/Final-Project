@@ -4,7 +4,7 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-//const cors = require('cors');
+const cors = require('cors');
 
 
 
@@ -17,6 +17,9 @@ require('./config/database.cjs');
 
 // create my app
 const app = express();
+// Enable CORS for all routes
+//app.use(cors());
+app.use(cors({ origin: 'http://localhost:5173' }));
 
 app.use(logger('dev'));
 app.use(express.json());
