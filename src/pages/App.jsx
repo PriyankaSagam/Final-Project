@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
+
 // import my functionality that I've added
 import { getUser } from "../utilities/users-services";
 
@@ -10,11 +11,11 @@ import "./App.css";
 
 // import pages
 import AuthPage from "./AuthPage";
-import NewOrderPage from "./NewOrderPage";
-import OrderHistoryPage from "./OrderHistoryPage";
-
+// import NewOrderPage from "./NewOrderPage";
+import Jewelry from "./Jewelry";
 // import components
 import NavBar from "../components/NavBar";
+import Cart from "../components/Cart"
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -29,8 +30,9 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/orders/new" element={<NewOrderPage />} />
-            <Route path="/orders" element={<OrderHistoryPage />} />
+           <Route path="/jewelry" element={<Jewelry />} />
+           <Route path="/cart" element={<Cart />} />
+
           </Routes>
         </>
       ) : (

@@ -12,15 +12,20 @@ function NavBar(props) {
   }
 
   return (
-    <nav>
-        <Link to='/orders'>Order History</Link>
+    <nav className='nav'>
+        <Link to='/jewelry'>Jewelry</Link>
         &nbsp; | &nbsp;
-        <Link to='/orders/new'>New Orders</Link>
+        {/* <Link to='/orders/new'>Order History Page</Link>  */}
+        {/* &nbsp; | &nbsp; */}
+        <span className='welcome'>Welcome, {props.user.name}</span>
         &nbsp; | &nbsp;
-        <span>Welcome, {props.user.name}</span>
-        &nbsp; | &nbsp;
+        
+        <Link to='/cart'>cart</Link>
+      &nbsp; | &nbsp;
+      
         <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
+
   )
 }
 

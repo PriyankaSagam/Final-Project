@@ -7,7 +7,7 @@
   --tan-4: #508f90;
   --orange: hsl(247, 31%, 63%);
   --text-light: #ab1908;
-  --text-dark: #3b1b06;
+  --text-dark: #193b06;
 }
 
 *, *:before, *:after {
@@ -26,57 +26,18 @@ body {
   height: 100vh;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
-#root {
+ #root {
   height: 100%;
 }
 
-.align-ctr {
-  text-align: center;
-}
 
-.align-rt {
-  text-align: right;
-}
 
-.smaller {
-  font-size: smaller;
-}
 
-.flex-ctr-ctr {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.flex-j-end {
-  justify-content: flex-end;
-}
-
-.scroll-y {
-  overflow-y: scroll;
-}
-
-.section-heading {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--tan-1);
-  color: var(--text-dark);
-  border: .1vmin solid var(--tan-3);
-  border-radius: 1vmin;
-  padding: .6vmin;
-  text-align: center;
-  font-size: 2vmin;
-}
 
 .form-container {
   padding: 3vmin;
@@ -102,21 +63,21 @@ label {
   font-size: 2vmin;
   display: flex;
   align-items: center;
-}
-
-input {
+} 
+  
+ /* input {
   padding: 1vmin;
   font-size: 2vmin;
   border: .1vmin solid var(--tan-3);
   border-radius: .5vmin;
   color: var(--text-dark);
-  background-image: none !important; /* prevent lastpass */
+  background-image: none !important;  
   outline: none;
-}
+}  */
 
-input:focus {
+/* input:focus {
   border-color: var(--orange);
-}
+} */
 
 button, a.button {
   margin: 1vmin;
@@ -160,4 +121,16 @@ button[type="submit"] {
 .signup{
   width:120px;
   
+}
+
+.nav{
+  font-size: x-large;
+  display: flex;
+  justify-content:space-between;
+}
+
+.welcome{
+  display: flex;
+  justify-content:center;
+  font-size:xx-large;
 }

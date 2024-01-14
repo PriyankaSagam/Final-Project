@@ -5,6 +5,7 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 
+
 // define variables
 const PORT = process.env.PORT || 3001;
 
@@ -38,9 +39,11 @@ app.get('/api/test', (req, res) => {
   });
 
 app.use('/api/users', require('./routes/api/users.cjs'));
-// we have included the line 
+// we have included the line
 // const userRouter = require('./routes/api/users.cjs')
 // app.use('/api/user', userRouter);
+
+
 
 // The following "catch all" route (note the /*) is necessary
 // to return the index.html on all non-AJAX requests
