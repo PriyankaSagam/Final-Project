@@ -39,7 +39,7 @@ const cartReducer = (state, action) => {
       if (existingItem) {
         // Item already exists in the cart, update quantity
         const updatedCartItems = state.cartItems.map(item =>
-          item.name === action.payload.name ? { ...item, quantity: item.quantity + 1 } : item
+          item.name === action.payload.name ? { ...item,  quantity: item.quantity + 1, total: item.price * (item.quantity + 1) } : item
         );
 
         return {
@@ -50,11 +50,29 @@ const cartReducer = (state, action) => {
         // Item does not exist in the cart, add with quantity 1
         return {
           ...state,
-          cartItems: [...state.cartItems, { ...action.payload, quantity: 1 }],
+          cartItems: [...state.cartItems, { ...action.payload, quantity: 1, total: action.payload.price}],
         };
       }
 
-    // ... (other cases if needed)
+      case 'UPDATE_QUANTITY':
+        const { name, quantity, price } = action.payload;
+        const updatedCartItemsByName  = state.cartItems.map(item =>
+          item.name === name ? { ...item,  quantity: quantity, total: (price * quantity) } : item
+        );
+  
+        return {
+          ...state,
+          cartItems: updatedCartItemsByName ,
+        };
+
+      case 'REMOVE_FROM_CART':
+          const itemToRemove = action.payload.name;
+          const updatedCartItemsWithoutRemoved = state.cartItems.filter(item => item.name !== itemToRemove);
+    
+          return {
+            ...state,
+            cartItems: updatedCartItemsWithoutRemoved,
+      };
 
     default:
       return state;
