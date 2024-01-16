@@ -67,7 +67,7 @@ const CartDisplay = () => {
 
   return (
     <div>
-      <h2>Shopping Cart</h2>
+      <h2 className='shopping'>Shopping Cart</h2>
       <ul>
         {state.cartItems.map(item => (
           <li key={item.name} className={item.name === selectedItemName ? 'selected' : ''}>

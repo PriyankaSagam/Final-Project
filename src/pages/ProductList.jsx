@@ -25,21 +25,27 @@ const ProductList = () => {
   };
 
   return (
-    <div className='braclet'>
-      <h1>Product List</h1>
-      <hr />
-      <div className="braclet-item">
-      <ul>
-        {products.map(product => (
-          <li key={product._id}>
-            {product.id} {product.name}  ${product.price} <img src={product.image}></img>
+      <div>
+      <ul className="braclet-item">
+          {products.map(product => (
+          
+            <li key={product._id}>
+              <div>
+                {product.id} {product.name}
+              </div>
+              <div>
+                <img src={product.image} alt={product.name}/>
+              </div>
+              <div>
+            ${product.price}
+            </div>
             <button onClick={() => handleAddToCart(product)}>
               Add to Cart
             </button>
-          </li>
+            </li>
+            
         ))}
       </ul>
-      </div>
     </div>
   );
 };

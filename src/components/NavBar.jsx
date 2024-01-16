@@ -16,7 +16,6 @@ function NavBar(props) {
     <nav className='nav'>
         <Link to='/jewelry'>Jewelry</Link>
         &nbsp; | &nbsp;
-        {/* <Link to='/orders/new'>Order History Page</Link>  */}
         {/* &nbsp; | &nbsp; */}
         <span className='welcome'>Welcome, {props.user.name}</span>
         &nbsp; | &nbsp;

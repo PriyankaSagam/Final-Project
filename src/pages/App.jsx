@@ -30,6 +30,7 @@ function App() {
       {user ? (
         <>
           <NavBar user={user} setUser={setUser} />
+      
           <Routes>
            <Route path="/jewelry" element={<ProductList />} />
            <Route path="/cart" element={<CartDisplay />} />

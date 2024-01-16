@@ -1,23 +1,31 @@
 /* CSS for the Navigation Component */
 
 .nav {
-    background-color: #2d1098;
-    padding: 10px;
+    background-color: #082725;
+    padding: 20px;
     color: rgb(16, 148, 49);
     text-align: center;
+    font-size: 40px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    position :fixed;
+    top:0;
   }
   
   .nav a {
     color: red;
     text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  .nav a:hover {
-    text-decoration: underline;
+    font-size: 20px;
+    scroll-behavior: smooth;
+
   }
   
   .welcome {
     font-weight: bold;
+ 
+    font-size:xx-large;
   }
-  
+
+ 
