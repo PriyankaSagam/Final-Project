@@ -48,7 +48,7 @@ const CartDisplay = () => {
           // 'Authorization': `Bearer ${userToken}`,
         },
         body: JSON.stringify({
-          userName: user, // Replace with the actual username or get it from user authentication
+          userName: user, 
           cartItems: state.cartItems,
           totalPrice: total,
         }),
@@ -96,7 +96,6 @@ const CartDisplay = () => {
       {checkoutTotal !== null && (
         <div>
           <p>Total Price: ${checkoutTotal}</p>
-          {/* You can add more information or redirect to a checkout page */}
         </div>
       )}
        <button onClick={handleBuy}>Buy</button>

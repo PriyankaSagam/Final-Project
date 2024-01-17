@@ -62,11 +62,18 @@ https://github.com/PriyankaSagam/Final-Project.git
 1. react (v18.2.0): JavaScript library for building user interfaces.
 2. react-dom (v18.2.0): Provides DOM-specific methods for React.
 3. react-router-dom (v6.21.1): Routing library for React applications.
+4. npm vite@latest in terminal to create a react app
 
 # browser--
 
-1. localhost:3001-----backend
-2. localhost:5173-----frontend
+1. localhost:3001-----backend....node server.cjs
+2. localhost:5173-----frontend....npm run dev
+
+# Unsolved Problems:
+   Adding items into Cart should populate item count in NavBar at Cart like Cart(5)
+
+# Future Enhancements:
+   Product and Order maintenance/Admin services like modifying/removing products and orders without using seed file.
 
 # Images
 
@@ -75,5 +82,6 @@ https://pixabay.com/
 # Deployed link
 
 https://final-project-t52m.onrender.com
+
 
 

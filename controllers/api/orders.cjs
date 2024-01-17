@@ -8,7 +8,7 @@ exports.saveCartItems = async (req, res) => {
     }
 
     const ordersToInsert = cartItems.map(item => ({
-      user: userName,  // Assuming userName is the user you are sending from the client side
+      user: userName,  
       orderItems: [
         {
           name: item.name,
@@ -16,7 +16,7 @@ exports.saveCartItems = async (req, res) => {
           price: item.price,
         },
       ],
-      totalPrice,  // Assuming totalPrice is the total price for the order
+      totalPrice,  
     }));
 
     await Order.insertMany(ordersToInsert);
