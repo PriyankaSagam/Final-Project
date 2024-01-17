@@ -20,7 +20,7 @@ function NavBar(props) {
         <span className='welcome'>Welcome, {props.user.name}</span>
         &nbsp; | &nbsp;
         
-        <Link to='/cart'>cart</Link>
+        <Link to='/cart'>Cart</Link>
       &nbsp; | &nbsp;
       
         <Link to="" onClick={handleLogOut}>Log Out</Link>
