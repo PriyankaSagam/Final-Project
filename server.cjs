@@ -7,8 +7,6 @@ const logger = require('morgan');
 const cors = require('cors');
 
 
-
-
 // define variables
 const PORT = process.env.PORT || 3001;
 
@@ -18,8 +16,8 @@ require('./config/database.cjs');
 // create my app
 const app = express();
 // Enable CORS for all routes
-//app.use(cors());
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors());
+//app.use(cors({ origin: 'http://localhost:5173' }));
 
 
 app.use(logger('dev'));
