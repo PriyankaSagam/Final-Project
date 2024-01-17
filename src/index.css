@@ -99,5 +99,5 @@ button[type="submit"] {
 .shopping{
   padding:90px;
   font-size: xx-large;
-  /* background-image: url('./images/braceback.jpg'); */
+  background-image: url('/images/braceback.jpg');
 }

@@ -26,10 +26,10 @@ const ProductList = () => {
 
   return (
       <div>
-      <ul className="braclet-item">
+      <ul className="braclet-item" >
           {products.map(product => (
           
-            <li key={product._id}>
+            <li key={product._id} >
               <div>
                 {product.id} {product.name}
               </div>

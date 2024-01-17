@@ -13,25 +13,25 @@
 
 # Flowchart
 
-![Alt text](images/flowchart.jpg)
+![Alt text](public/images/flowchart.jpg)
 
 # ERD diagram
 
-![Alt text](images/ERD.jpg)
+![Alt text](public/images/ERD.jpg)
 
 # Wireframes
 
 1. Authentication page
 
-![Alt text](images/AuthScreen.jpg)
+![Alt text](public/images/AuthScreen.jpg)
 
 2. Jewelry Page
 
-![Alt text](images/JewelryPage.jpg)
+![Alt text](public/images/JewelryPage.jpg)
 
 3. Cart Page
 
-![Alt text](images/Cart.jpg)
+![Alt text](public/images/Cart.jpg)
 
 # Project planning
 
@@ -71,5 +71,9 @@ https://github.com/PriyankaSagam/Final-Project.git
 # Images
 
 https://pixabay.com/
+
+# Deployed link
+
+https://final-project-t52m.onrender.com
 
 
